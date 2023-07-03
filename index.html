@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ETOZHEESUS</title>
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <style>
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+    </header>
+    <div class="logo">
+        <img src="images/ava.jpg" alt="Image">
+    </div>
+    <div class="text1">
+      ETOZHEESUS
+    </div>
+    <div class="text2">
+      Я начинающий стример, который с увлечением изучает web design и программирование, <br>
+      а также стараюсь создавать красивые оформления для своих стримов. <br>
+      В свободное время я с большим удовольствием играю в различные игры, <br>
+      вы можете узнать мои любимые, заглянув на мой профиль в Steam.
+    </div>
+    <div class="social">
+        <a href="https://vk.com/etozheesus">
+            <img src="images/vk.png">
+        </a>
+        <a href="https://www.instagram.com/etozheesus/">
+            <img src="images/is.png">
+        </a>
+        <a href="https://www.twitch.tv/etozheesus">
+            <img src="images/tw.png">
+        </a>
+        <a href="https://kick.com/etozheesus">
+            <img src="images/kick.png">
+        </a>
+        <a href="https://t.me/etozheesusoff">
+            <img src="images/tg.png">
+        </a>
+        <a href="https://discord.com/invite/whhUjWUN35">
+            <img src="images/dis.png">
+        </a>
+        <a href="https://steamcommunity.com/id/etozheesus/">
+          <img src="images/st.png">
+      </a>
+    </div>
+    <div class="r">
+        <img src="images/r.png">
+    </div>
+    <div class="parallax-container">
+      <div class="parallax">
+          <img src="images/layar-1.jpg" alt="Parallax Image 1" id="image1">
+      </div>
+      <div class="parallax">
+          <img src="images/layer-2.png" alt="Parallax Image 2" id="image2">
+      </div>
+      <div class="parallax">
+          <img src="images/layer-5.png" alt="Parallax Image 5" id="image3">
+      </div>
+      <div class="parallax">
+        <img src="images/layer-6.png" alt="Parallax Image 6" id="image4">
+      </div>
+    </div>
+<script>
+  var image1Element = document.getElementById('image1');
+  var image2Element = document.getElementById('image2');
+  var image3Element = document.getElementById('image3');
+  var image4Element = document.getElementById('image4');
+
+  document.addEventListener('mousemove', function(event) {
+     var xAxis = (window.innerWidth / 2 - event.pageX) / 20;
+     var yAxis = (window.innerHeight / 2 - event.pageY) / 20;
+
+     image1Element.style.transform = 'translateX(' + xAxis + 'px) translateY(' + yAxis + 'px)';
+     image2Element.style.transform = 'translateX(' + (xAxis * 1.5) + 'px) translateY(' + (yAxis * 1.5) + 'px)';
+     image3Element.style.transform = 'translateX(' + (xAxis * 2) + 'px) translateY(' + (yAxis * 2) + 'px)';
+     image4Element.style.transform = 'translateX(' + (xAxis * 2.5) + 'px) translateY(' + (yAxis * 2.5) + 'px)';
+  });
+</script>
+<div class="r">
+  <img src="images/r.png">
+  </main>
+
+</div>
+  <footer>
+    <div class="logo_footer">
+      <img src="images/etozheesus.png" alt="image">
+    </div>
+    <div class="footer_text">
+      © Etozheesus Inc.
+    </div> 
+  </footer>
+</body>
+</html>
