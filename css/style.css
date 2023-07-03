@@ -145,7 +145,18 @@ footer {
 }
 /* Стили для мобильных устройств */
 @media only screen and (max-width: 600px) {
-   /* Ваши стили для мобильных устройств */
+  header {
+    padding: 10px;
+  }
+  .text1 {
+    margin-top: 30px;
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .text2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
 }
 
 /* Стили для планшетов */
