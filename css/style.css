@@ -143,14 +143,17 @@ footer {
   height: 100%;
   margin: 10px 0;
 }
-/* Default style rules for desktop screens */
-
-/* Mobile-first responsive styles */
+/* Стили для мобильных устройств */
 @media only screen and (max-width: 600px) {
-  /* CSS rules for mobile screens */
+   /* Ваши стили для мобильных устройств */
 }
 
-/* Tablet responsive styles */
+/* Стили для планшетов */
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
-  /* CSS rules for tablet screens */
+   /* Ваши стили для планшетов */
+}
+
+/* Стили для настольных компьютеров */
+@media only screen and (min-width: 1025px) {
+   /* Ваши стили для настольных компьютеров */
 }
