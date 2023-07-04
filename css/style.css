@@ -46,8 +46,8 @@ body {
 }
 
 @font-face {
-  font-family: 'CustomFont';
-  src: url('/fonts/roboto-thin.ttf') format('truetype');
+  font-family: 'roboto-thin';
+  src: url('/fonts/roboto-thin.ttf') format('opentype');
 }
 .name {
   padding-top: 50px;
@@ -63,7 +63,7 @@ body {
 	justify-content: center;
   color: #ffffffc7;
   font-size: 17px;
-  font-family: "CustomFont";
+  font-family: roboto-thin;
   text-align: center;
 }
 .social {
