@@ -57,8 +57,9 @@ body {
   display: flex;
 	justify-content: center;
   color: #ffffff;
-  font-size: 100px;
+  font-size: 60px;
   font-family: georgia;
+  text-align: center;
 }
 .about {
   padding-top: 20px;
@@ -133,7 +134,7 @@ footer {
 .footer_logo {
 	display: flex;
 	justify-content: center;
-  scale: 50%;
+  scale: 40%;
 }
 .footer_text {
   font-family: 'Philosopher-Regular';
