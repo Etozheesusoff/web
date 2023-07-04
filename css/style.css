@@ -47,8 +47,12 @@ body {
 
 @font-face {
   font-family: 'roboto-thin';
-  src: url('/fonts/roboto-thin.ttf') format('opentype');
+  src: url('/fonts/roboto-thin.ttf') format('truetype'),
+       url('/fonts/roboto-thin.woff') format('woff'),
+       url('/fonts/roboto-thin.woff2') format('woff2');
 }
+
+
 .name {
   padding-top: 50px;
   display: flex;
@@ -123,14 +127,18 @@ body {
   height: 120%;
   object-fit: cover;
 }
+footer {
+  max-width: 1180px;
+	margin: 0px auto;
+}
 .footer_logo {
 	display: flex;
 	justify-content: center;
+  scale: 50%;
 }
 .footer_text {
-  font-family: "CustomFont";
-  padding-top: 20px;
-  padding-bottom: 10px;
+  font-family: roboto-thin;
+  padding-bottom: 20px;
   color:#ffffff;
   display: flex;
 	justify-content: center;
