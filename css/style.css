@@ -46,12 +46,8 @@ body {
 }
 
 @font-face {
-  font-family: 'roboto-thin';
-  src: url('/fonts/roboto-thin.ttf') format('truetype'),
-       url('/fonts/roboto-thin.woff') format('woff'),
-       url('/fonts/roboto-thin.woff2') format('woff2');
+  font-family: 'Philosopher', sans-serif;
 }
-
 
 .name {
   padding-top: 50px;
@@ -66,8 +62,8 @@ body {
   display: flex;
 	justify-content: center;
   color: #ffffffc7;
-  font-size: 17px;
-  font-family: roboto-thin;
+  font-size: 20px;
+  font-family: Philosopher;
   text-align: center;
 }
 .social {
@@ -137,7 +133,7 @@ footer {
   scale: 50%;
 }
 .footer_text {
-  font-family: roboto-thin;
+  font-family: Philosopher;
   padding-bottom: 20px;
   color:#ffffff;
   display: flex;
