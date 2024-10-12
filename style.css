@@ -72,10 +72,10 @@ header{
 }
 
 .home-content {
-    max-width: 600px; /* Фиксированная максимальная ширина */
-    margin: 0 auto; /* Центрирование текста */
-    text-align: center; /* Выравнивание текста по центру */
-    padding: 20px; /* Отступ для улучшения восприятия */
+    max-width: 600px; 
+    margin: 0 auto;
+    text-align: center; 
+    padding: 20px;
 }
 
 section{
@@ -91,45 +91,45 @@ section{
     background-color: black;
 }
 .home-img {
-    position: relative; /* Для позиционирования псевдоэлемента */
-    width: 32vw; /* Фиксированная ширина для изображения */
-    border-radius: 50%; /* Скругляем края контейнера */
-    overflow: hidden; /* Скрываем части, выходящие за пределы контейнера */
+    position: relative;
+    width: 32vw; 
+    border-radius: 50%; 
+    overflow: hidden; 
 }
 
 .home-img::before {
-    content: ""; /* Добавляем контент для псевдоэлемента */
+    content: ""; 
     position: absolute;
-    top: 50%; /* Центрируем по вертикали */
-    left: 50%; /* Центрируем по горизонтали */
-    width: 400%; /* Увеличиваем ширину шара */
-    height: 400%; /* Увеличиваем высоту шара */
-    background-color: rgba(255, 255, 255, 1); /* Белый цвет шара */
-    border-radius: 50%; /* Скругляем края */
-    transform: translate(-50%, -50%); /* Центрируем шар */
-    opacity: 1; /* Начальная непрозрачность */
-    animation: glow 4s infinite; /* Зацикленная анимация */
-    z-index: 0; /* Псевдоэлемент находится ниже изображения */
+    top: 50%; 
+    left: 50%; 
+    width: 400%; 
+    height: 400%; 
+    background-color: rgba(255, 255, 255, 1); 
+    border-radius: 50%; 
+    transform: translate(-50%, -50%); 
+    opacity: 1; 
+    animation: glow 4s infinite; 
+    z-index: 0;
 }
 
 @keyframes glow {
     0% {
-        opacity: 1; /* Полная непрозрачность */
+        opacity: 1;
     }
     50% {
-        opacity: 0.1; /* Минимальная непрозрачность */
+        opacity: 0.1;
     }
     100% {
-        opacity: 1; /* Возвращаем к полной непрозрачности */
+        opacity: 1; 
     }
 }
 
 .home-img img {
     position: relative;
-    width: 100%; /* Изображение занимает всю ширину контейнера */
-    border-radius: 50%; /* Скругляем края изображения */
-    z-index: 1; /* Изображение находится выше псевдоэлемента */
-    transition: 0.2s linear; /* Плавный переход при наведении */
+    width: 100%; 
+    border-radius: 50%;
+    z-index: 1; 
+    transition: 0.2s linear;
 }
 
 
@@ -155,7 +155,7 @@ span {
 
 .home-img img {
     position: relative;
-    width: 100%; /* Сделайте изображение на всю ширину контейнера */
+    width: 100%; 
     border-radius: 50%;
     box-shadow: 0 0 25px solid #CD853F;
     cursor: pointer;
@@ -217,14 +217,12 @@ span {
 }
 
 .animated-text {
-    color: #CD853F; /* Цвет для текста с анимацией */
+    color: #CD853F; 
     font-weight: 600;
-    font-size: 34px; /* Убедитесь, что текст достаточно большой */
+    font-size: 34px; 
 }
 
 #phrase {
-    color: white; /* Установите цвет текста в белый */
-    font-weight: 600; /* Установите жирный шрифт, если нужно */
+    color: white;
+    font-weight: 600; 
 }
-
-/* Остальные стили остаются прежними... */
