@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>ETOZHEESUS.web</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">ETOZHEESUS</a>
+        <div class="language-switcher">
+            <a href="#" class="lang" data-lang="en">EN</a> | 
+            <a href="#" class="lang" data-lang="ru">RU</a>
+        </div>
+    </header>
+    
+    <section class="home">
+        <div class="home-img">
+            <img src="main.jpg" alt="">
+        </div>
+        <div class="home-content">
+            <h1><span id="greeting">Hi, It's Esus</span></h1>
+            <h3 class="typing-text"><span id="phrase">I'm a</span> <span class="animated-text"></span></h3>
+            <p>I'm a digital content creator and am basically a regular person like many others, but according to others, my walk sets me apart from everyone else.<br>My favorite quote that I associate myself with is “Something between a cutie and an absolute scum”</p>
+            <div class="social-icons">
+                <a href="https://t.me/etozheesusoff"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://www.instagram.com/etozheesus/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://steamcommunity.com/id/etozheesus/"><i class="fa-brands fa-steam"></i></a>
+                <a href="https://vk.com/etozheesus"><i class="fa-brands fa-vk"></i></a>
+                <a href="https://www.twitch.tv/etozheesus"><i class="fa-brands fa-twitch"></i></a>
+            </div>
+            <a href="https://t.me/THEETOZHEESUS" class="btn">channel</a>
+
+        </div>
+    </section>
+
+    <script>
+        const languageContent = {
+            en: {
+                title: "Hi, It's Esus",
+                description: "I'm a digital content creator and am basically a regular person like many others, but according to others, my walk sets me apart from everyone else.<br>My favorite quote that I associate myself with is “Something between a cutie and an absolute scum”. ",
+                channel: "Tg channel",
+                animationWords: ["Genius", "Billionaire", "Playboy", "Philanthropist", "Liar"],
+                phrase: "I'm a" // Фраза для английского
+            },
+            ru: {
+                title: "Привет, это Esus",
+                description: "Я автор цифрового контента, и, по сути, я такой же обычный человек, как и многие, но по словам других - моя походка отличает меня от всех остальных.<br>Моя любимая цитата, с которой  я себя ассоциирую - «Что-то между милашкой и абсолютной мразью». ",
+                channel: "Тг канал",
+                animationWords: ["Гений", "Миллиардер", "Плейбой", "Филантроп", "Пиздабол"],
+                phrase: "Я" // Фраза для русского
+            }
+        };
+    
+        // Функция для смены языка
+        function switchLanguage(lang) {
+            // Меняем текст контента
+            document.querySelector('.home-content h1').innerHTML = languageContent[lang].title;
+            document.querySelector('.home-content p').innerHTML = languageContent[lang].description;
+            document.querySelector('.btn').innerHTML = languageContent[lang].channel;
+    
+            // Меняем фразу "I'm a"
+            document.getElementById('phrase').innerHTML = languageContent[lang].phrase;
+    
+            // Подсвечиваем выбранный язык
+            document.querySelectorAll('.lang').forEach(el => el.style.color = 'white');
+            document.querySelector(`.lang[data-lang="${lang}"]`).style.color = '#CD853F';
+    
+            // Обновляем текст для анимации
+            updateAnimationWords(languageContent[lang].animationWords);
+        }
+    
+        // Функция для установки текста анимации
+        let animationInterval; // Переменная для хранения интервала
+        let cursorInterval; // Переменная для управления курсором
+        let cursorVisible = true; // Переменная для управления видимостью курсора
+    
+        function updateAnimationWords(words) {
+            const animatedText = document.querySelector('.animated-text');
+            let index = 0; // Индекс текущего слова
+    
+            // Сбрасываем интервал, если он уже запущен
+            clearInterval(animationInterval);
+            clearInterval(cursorInterval);
+            
+            // Устанавливаем первое слово с курсором
+            animatedText.innerHTML = words[index] + " |"; // Добавляем курсор
+    
+            // Меняем слово каждые 3 секунды (добавьте больше времени для более плавной анимации)
+            animationInterval = setInterval(() => {
+                index = (index + 1) % words.length; // Переход к следующему слову
+                animatedText.innerHTML = words[index] + " |"; // Обновляем текст с курсором
+            }, 3000); // 3000 мс = 3 секунды
+    
+            // Дополнительный интервал для мигания курсора
+            cursorInterval = setInterval(() => {
+                cursorVisible = !cursorVisible; // Меняем видимость курсора
+                animatedText.innerHTML = words[index] + (cursorVisible ? " |" : " "); // Обновляем текст с курсором
+            }, 600); // Мигаем курсором каждые 600 мс
+        }
+    
+        // Слушатели на переключатели языков
+        document.querySelectorAll('.lang').forEach(langBtn => {
+            langBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const selectedLang = this.getAttribute('data-lang');
+                switchLanguage(selectedLang);
+            });
+        });
+    
+        // Устанавливаем начальный язык
+        switchLanguage('ru'); // По умолчанию английский
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 3rem;
+    color: #ffffff;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+.language-switcher {
+    position: absolute;
+    top: 20px;
+    right: 9%;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white;
+}
+
+.language-switcher a {
+    color: white;
+    margin: 0 1rem;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.language-switcher a:hover,
+.language-switcher a[data-lang='en'],
+.language-switcher a[data-lang='ru'] {
+    color: #2F4F4F;
+}
+
+.home-content {
+    max-width: 600px; /* Фиксированная максимальная ширина */
+    margin: 0 auto; /* Центрирование текста */
+    text-align: center; /* Выравнивание текста по центру */
+    padding: 20px; /* Отступ для улучшения восприятия */
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+.home-img {
+    position: relative; /* Для позиционирования псевдоэлемента */
+    width: 32vw; /* Фиксированная ширина для изображения */
+    border-radius: 50%; /* Скругляем края контейнера */
+    overflow: hidden; /* Скрываем части, выходящие за пределы контейнера */
+}
+
+.home-img::before {
+    content: ""; /* Добавляем контент для псевдоэлемента */
+    position: absolute;
+    top: 50%; /* Центрируем по вертикали */
+    left: 50%; /* Центрируем по горизонтали */
+    width: 400%; /* Увеличиваем ширину шара */
+    height: 400%; /* Увеличиваем высоту шара */
+    background-color: rgba(255, 255, 255, 1); /* Белый цвет шара */
+    border-radius: 50%; /* Скругляем края */
+    transform: translate(-50%, -50%); /* Центрируем шар */
+    opacity: 1; /* Начальная непрозрачность */
+    animation: glow 4s infinite; /* Зацикленная анимация */
+    z-index: 0; /* Псевдоэлемент находится ниже изображения */
+}
+
+@keyframes glow {
+    0% {
+        opacity: 1; /* Полная непрозрачность */
+    }
+    50% {
+        opacity: 0.1; /* Минимальная непрозрачность */
+    }
+    100% {
+        opacity: 1; /* Возвращаем к полной непрозрачности */
+    }
+}
+
+.home-img img {
+    position: relative;
+    width: 100%; /* Изображение занимает всю ширину контейнера */
+    border-radius: 50%; /* Скругляем края изображения */
+    z-index: 1; /* Изображение находится выше псевдоэлемента */
+    transition: 0.2s linear; /* Плавный переход при наведении */
+}
+
+
+.home .home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span {
+    color: #CD853F;
+}
+
+.home-content h3 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+}
+
+.home-img img {
+    position: relative;
+    width: 100%; /* Сделайте изображение на всю ширину контейнера */
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #CD853F;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #CD853F;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #CD853F;
+}
+
+.social-icons a:hover {
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #CD853F;
+    box-shadow: 0 0 25px #CD853F;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #CD853F;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #CD853F;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale3d(1.03);
+    background-color: #CD853F;
+    color: black;
+    box-shadow: 0 0 25px #CD853F;
+}
+
+.typing-text {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.animated-text {
+    color: #CD853F; /* Цвет для текста с анимацией */
+    font-weight: 600;
+    font-size: 34px; /* Убедитесь, что текст достаточно большой */
+}
+
+#phrase {
+    color: white; /* Установите цвет текста в белый */
+    font-weight: 600; /* Установите жирный шрифт, если нужно */
+}
+
+/* Остальные стили остаются прежними... */
