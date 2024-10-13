@@ -23,20 +23,17 @@ body{
     color: white;
 }
 
-header{
-    margin-top: 20px;
-    position: fixed;
+.header-container {
+    position: absolute; /* Или sticky, если хотите */
     top: 0;
     left: 0;
-    width: 100%;
-    padding: 1rem 9%;
-    background-color: black;
-    filter: drop-shadow(10px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
+    width: 100%; /* Ширина на 100% */
+    padding: 1rem 9%; /* Отступы */
+    background-color: rgba(0, 0, 0, 0.5); /* Прозрачный фон */
 }
+
+/* Остальные стили для logo и языка */
+
 
 .logo{
     font-size: 3rem;
@@ -51,9 +48,9 @@ header{
 }
 
 .language-switcher {
-    position: absolute;
-    top: 20px;
-    right: 9%;
+    position: absolute; /* Положение меню переключения языка */
+    top: 20px; /* Отступ сверху */
+    right: 9%; /* Отступ справа */
     font-size: 1.8rem;
     font-weight: 600;
     color: white;
